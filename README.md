@@ -19,6 +19,13 @@ Our project is centered around the analysis of ocean temperature data. By integr
 - [stormglass.io Weather API](https://stormglass.io/marine-weather/)
 - [Ice sheets (Melt Data)](https://nsidc.org/ice-sheets-today/melt-data-tools)
 
-### A new package
-- [Seaborn - a pretty python visualization package](https://seaborn.pydata.org/)
-- [Plotly aniations](https://plotly.com/python/animations/)
+### Database
+- [MongoDB](https://www.mongodb.com/)
+
+### Packages
+- [Seaborn](https://seaborn.pydata.org/)* - a pretty python visualization package
+- [Plotly](https://plotly.com/graphing-libraries/)
+  - [animation](https://plotly.com/python/animations/)
+- [Leaflet](https://leafletjs.com/)
+
+*\* = new*
