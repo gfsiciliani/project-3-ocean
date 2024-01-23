@@ -20,4 +20,5 @@ Our project is centered around the analysis of ocean temperature data. By integr
 - [Ice sheets (Melt Data)](https://nsidc.org/ice-sheets-today/melt-data-tools)
 
 ### A new package
-[Seaborn - a pretty python visualization package](https://seaborn.pydata.org/)
+- [Seaborn - a pretty python visualization package](https://seaborn.pydata.org/)
+- [Plotly aniations](https://plotly.com/python/animations/)
