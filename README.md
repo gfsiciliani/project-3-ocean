@@ -18,6 +18,8 @@ Our project is centered around the analysis of ocean temperature data. By integr
   - [CORC](https://spraydata.ucsd.edu/projects/corc/)
 - [stormglass.io Weather API](https://stormglass.io/marine-weather/)
 - [Ice sheets (Melt Data)](https://nsidc.org/ice-sheets-today/melt-data-tools)
+- NOAA
+- https://api.tidesandcurrents.noaa.gov/api/prod/
 
 ### Database
 - [MongoDB](https://www.mongodb.com/)
