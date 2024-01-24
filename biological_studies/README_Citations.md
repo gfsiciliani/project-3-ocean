@@ -13,3 +13,8 @@ Alaska Fisheries Science Center, 24 January 2024: AFSC/ABL: Nearshore Fish Atlas
 
 Latitude and Longtitudes Measured for this study found in:
 ABL_Nearshore Fish Atlas of Alaska_ID_17274_Site.csv
+
+# Alaskan Water Quality
+NOAA National Estuarine Research Reserve System (2019). NOAA National Estuarine Research Reserve (NERR) System-wide Monitoring Program Meteorological, Water Quality and Nutrient/Pigment Data from 1994 to 2023 (NCEI Accession 0200366). [indicate subset used]. NOAA National Centers for Environmental Information. Dataset. https://www.ncei.noaa.gov/archive/accession/0200366. Accessed 24 January 2024.
+
+https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:0200366
