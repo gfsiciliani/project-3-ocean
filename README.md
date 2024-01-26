@@ -3,6 +3,24 @@
 ## Proposal
 Our project is centered around the analysis of ocean temperature data. By integrating data from multiple authoritative APIs, our goal is to construct a visual narrative that highlights the changes in ocean temperature and potential correlations of the frequency and intensity of severe weather events, as well the effects on oceanlife.
 
+## Visualization Brainstorms
+Baby seal populations
+Storms - large scale tracking or isolating specific times/areas
+Hurricanes - large scale tracking or isolating specific times/areas
+Greenland Ice Melt
+
+start with basics--show rises in global ocean temps, surface temps, CO2 emissions
+OR we could go the opposite track and center the seals
+
+then layer on top with the ideas mentioned above
+layered line chart may work best for larger scale analysis
+bubble chart for storm intensity
+would love to incorporate gridded data to create heatmaps and/or focus on a specific area
+time lapse animations could be cool?
+drop down menus to select a specific event or set of events or time frame or region or
+
+all vs ocean temps
+
 ## Resources
 ### APIs
 - **NOAA**
