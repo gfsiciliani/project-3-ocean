@@ -23,20 +23,17 @@ all vs ocean temps
 
 ## Resources
 ### APIs
+- **ARGOVIS**
+  - [Colorado University](https://argovis.colorado.edu/)
+- **Our World in Data**
+  - [CO2 Emissions](https://ourworldindata.org/co2-emissions#%253A~%253Atext%253DBy%25201990%2520this%2520had%2520almost%252Cyet%2520to%2520reach%2520their%2520peak)
 - **NOAA**
-  - [NOAA General page](https://www.ncei.noaa.gov/products)
   - [Hurricane Satellite (HURSAT) Data](https://www.ncei.noaa.gov/products/hurricane-satellite-data)
-  - [Access page](https://www.ncei.noaa.gov/access)
-  - https://api.tidesandcurrents.noaa.gov/api/prod/
+  - Seals??
+
 - **NASA**
-  - [Global Land-Ocean Temp Index Data Set](https://www.nasa.gov/stem-content/global-land-ocean-temperature-index-data-set/#%253A~%253Atext%253DThe%2520Land-Ocean%2520Temperature%2520Index%252Cweather%2520stations%2520for%2520land%2520data)
-- **UCSD**
-  - [The Keeling Curve (daily record of global atmospheric carbon dioxide concentration)](https://keelingcurve.ucsd.edu/)
-  - [UCSD Upper ocean temp tracking](https://www.hrx.ucsd.edu/)
-  - [Data scripps (what?)](https://scripps.ucsd.edu/research/data-programs)
-  - [CORC](https://spraydata.ucsd.edu/projects/corc/)
+  - ?[Global Land-Ocean Temp Index Data Set](https://www.nasa.gov/stem-content/global-land-ocean-temperature-index-data-set/#%253A~%253Atext%253DThe%2520Land-Ocean%2520Temperature%2520Index%252Cweather%2520stations%2520for%2520land%2520data)
 - [stormglass.io Weather API](https://stormglass.io/marine-weather/)
-- [Ice sheets (Melt Data)](https://nsidc.org/ice-sheets-today/melt-data-tools)
 
 
 ### Database
