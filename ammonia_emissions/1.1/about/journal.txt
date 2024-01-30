@@ -1,0 +1,56 @@
+*****************************************************************
+Journal for accession number:  0207181
+Created on:                    2019-11-19 18:30:23 UTC
+By:                            National Centers for Environmental Information
+
+Source: Alberth Nahas, North Carolina State University (NCSU), submitted
+data and metadata to NCEI in submission package PF5PT2 via Send2NCEI (S2N).
+
+Actions: An automated procedure copied the files from the submission package
+into this accession. A metadata record in ISO 19115-2 XML format was also
+generated from the information provided by the submitter and was copied into
+this accession.
+
+Files:
+
+about/ 
+This directory contains files created by NCEI staff and processing, including
+'negotiable' information between NCEI staff and the data provider.
+
+0-email.txt -
+  Email between NCEI and submitter requesting a preview graphic, clarifying 
+  changes made to the title and abstract as well as requesting complete 
+  reference citations and the types of fertilizers in column 5 of the data
+  .csv data file. See data/0-data/SEND2NCEI.response.docx and 
+  data/1-data/SEND2NCEI.response.pdf for fertilzer types
+  (0=synthetic fertilizer, 1=organic fertilizer) and other information. 
+  See data/0-data/SEND2NCEI.references.docx and 
+  data/1-data/SEND2NCEI.references.pdf reference citations.    
+
+0207181_preview.png - 
+  Copy of the data producer's Global NH3 Emissions file also available as
+  data/0-data/global.nh3.emissions.rep.png, created by NCEI to support 
+  NCEI browse graphic management.
+
+PF5PT2-confirmation_email.txt -
+  Email from the Send2NCEI web application to Alberth Nahas, North Carolina
+  State University (NCSU), confirming that NCEI has received the submission
+  information package.
+
+PF5PT2-report.txt -
+  Automatically generated report containing information about the automated
+  processing of this accession and provider-specific metadata. This report
+  is intended for use by the Data Content Manager assigned to this
+  accession.
+
+data/0-data/
+This directory contains files in their original format as downloaded to NCEI.
+
+data/1-data/
+This directory contains files that were converted by NCEI from their
+originally submitted format under the 0-data/ directory to an archival
+format.
+
+*.pdf -
+  Portable Document Format (PDF) files that NCEI converted from the Microsoft 
+  Word files in 0-data/. There is one PDF file for each Word file.

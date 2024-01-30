@@ -1,0 +1,21 @@
+The submitter provided the following profile information:
+Name: Alberth Nahas
+Organization: North Carolina State University (NCSU)
+Phone: 9197572217
+
+Contributors:
+Name: Viney Aneja
+Organization: North Carolina State University (NCSU)
+Institutions_id: 736
+Email: vpaneja@ncsu.edu
+Role: pointOfContact
+
+The following non-ATDB metadata was provided:
+Related Funding Agency: NOAA GFDL
+Suggested Author List: Aneja, Viney; Schlesinger, William; Li, Qi; Nahas, Alberth; Battye, William
+datatypes-0: soil temperature
+datatypes-1: soil moisture
+insttypes-0: NH3 analyzer
+insttypes-1: soil sensor
+insttypes-2: Reactive nitrogen analyzer
+projects-0: NOAA CPO AC4
