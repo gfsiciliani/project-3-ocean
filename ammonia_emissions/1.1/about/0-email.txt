@@ -1,0 +1,141 @@
+From: Alberth Nahas <acnahas@ncsu.edu>
+Date: Tue, Nov 19, 2019 at 11:45 AM
+Subject: Re: [Send2NCEI] data submission confirmation for Reference ID: PF5PT2
+To: Thomas Ryan - NOAA Federal <thomas.ryan@noaa.gov>
+Cc: Viney Aneja <vpaneja@ncsu.edu>
+
+Dear Thomas Ryan,
+Thank you for your e-mail. I have attached a Word document with our 
+responses to your questions and suggestions. In addition, a Word document 
+listing the references and an image in PNG format are attached to this 
+e-mail as per your request.Please let me know if you have any questions or 
+queries regarding our data submission.
+
+Thank you and best wishes,
+-Alberth
+
+From: Thomas Ryan - NOAA Federal <thomas.ryan@noaa.gov>
+Date: Tue, Nov 19, 2019 at 9:29 AM
+Subject: [Send2NCEI] data submission confirmation for Reference ID: PF5PT2
+To: <acnahas@ncsu.edu>
+
+
+Alberth Nahas,
+
+I apologize for the delay in processing your S2N data submission.  I am 
+performing the preliminary appraisal and have a few questions and suggestions.  
+This email, along with your responses will become part of the Archival 
+Information Package (AIP) for your submission.  
+Q1
+What are the 2 possible "fertilizer_type(s)" in column 5,  which has a domain 
+of [0, 1]?
+
+Q2
+Please provide a file with the full citations to the references listed in 
+column 9 of the data file so future users can find and use them.  The 
+references from the data file are listed below. 
+ALFAM21
+Badagliacca et al.12Carozzi et al.5
+Gericke et al.14H�ni et al.9
+Huo et al.13
+Mart�nez-Lagos et al.11
+Meade et al.17
+Ni et al.16
+Rodhe et al.15
+Roelcke et al.18
+Salazar et al.6
+Salazar et al.7
+Webb et al.2
+Wolf et al.8
+Yang et al.3
+Yang et al.4
+
+Q3
+The abstract refers to the US, India and China and then goes on to say that 
+the "The statistical model captures the spatial distribution of global NH3."
+Are there any more specific coordinates for the data than global?
+
+Q4
+A preview graphic is included with all Archival Information Packages (AIP).  
+Sampling locations are typically used but since you are indicating there is 
+ world-wide distribution, a map is not that useful but a map will be used if 
+you can not provide an image.  
+Can you provide an image that would be useful for a future user to decide 
+whether these data suite there purpose.  It could be a graph, plot, image in 
+PNGor JPG formats?
+
+Q5
+We think the title can be improved to help future users find and use your 
+data.  
+There are a couple of options below, please change or modify,if they can be 
+improved or made more accurate.  Or you can create a completely new title.  
+
+We would like to change the title from:
+AIR TEMPERATURE, pH, and others from 1990-01-01 to 2019-01-01
+
+To:
+Soil temperature, soil moisture, pH, ammonia and others from the NH3_STAT 
+statistical model from 1990-01-01 to 2019-01-01
+
+or
+Ammonia (NH3) emissions characterization from agricultural soil sources from 
+the NH3_STAT statistical model from 1990-01-01 to 2019-01-01
+
+or other?
+Q6
+
+We would like to make a minor change to the abstract to clarify exactly what is 
+in the AIP. Basically adding an introductory sentence. 
+
+From:
+Global ammonia (NH3) emissions into the atmosphere are projected to increase in 
+the coming years with the increased use of synthetic nitrogen fertilizers and 
+cultivation of nitrogen-fixing crops. A statistical model (NH3_STAT) is 
+developed for characterizing atmospheric NH3 emissions from agricultural soil 
+sources, and compared to the performance of other global and regional NH3 
+models (e.g., EDGAR, MASAGE, MIX and U.S. EPA). The statistical model was 
+developed by expressing a multiple linear regression equation between NH3 
+emission and the physicochemical variables. The model was evaluated for 2012 
+NH3 emissions. The results indicate that, in comparison to other data sets, the 
+model provides a lower global NH3 estimate by 57%, (NH3_STAT: 13.9 Tg N yr-1; 
+EDGAR: 33.0 Tg N yr-1). We also performed a region-based analysis (U.S., India, 
+and China) using the NH3_STAT model. For the U.S., our model produces an 
+estimate that is 143% higher in comparison to EPA. Meanwhile, the NH3_STAT 
+model estimate for India shows NH3 emissions between -0.8 and 1.4 times lower 
+when compared to other data sets. A lower estimate is also seen for China, 
+where the model estimates NH3 emissions 0.4-5 times lower than other datasets. 
+The difference in the global estimates is attributed to the lower estimates in 
+major agricultural countries like China and India. The statistical model 
+captures the spatial distribution of global NH3 emissions by utilizing a 
+simplified approach compared to other readily available datasets. Moreover, the 
+NH3_STAT model provides an opportunity to predict future NH3 emissions in a 
+changing world.
+
+To:
+
+The NCEI accessions contains statistical model (NH3_STAT) data.  Global ammonia 
+(NH3) emissions into the atmosphere are projected to increase in the coming 
+years with the increased use of synthetic nitrogen fertilizers and cultivation 
+of nitrogen-fixing crops. A statistical model (NH3_STAT) is developed for 
+characterizing atmospheric NH3 emissions from agricultural soil sources, and 
+compared to the performance of other global and regional NH3 models (e.g., 
+EDGAR, MASAGE, MIX and U.S. EPA). The statistical model was developed by 
+expressing a multiple linear regression equation between NH3 emission and the 
+physicochemical variables. The model was evaluated for 2012 NH3 emissions. The 
+results indicate that, in comparison to other data sets, the model provides a 
+lower global NH3 estimate by 57%, (NH3_STAT: 13.9 Tg N yr-1; EDGAR: 33.0 Tg N 
+yr-1). We also performed a region-based analysis (U.S., India, and China) using 
+the NH3_STAT model. For the U.S., our model produces an estimate that is 143% 
+higher in comparison to EPA. Meanwhile, the NH3_STAT model estimate for India 
+shows NH3 emissions between -0.8 and 1.4 times lower when compared to other 
+data sets. A lower estimate is also seen for China, where the model estimates 
+NH3 emissions 0.4-5 times lower than other datasets. The difference in the 
+global estimates is attributed to the lower estimates in major agricultural 
+countries like China and India. The statistical model captures the spatial 
+distribution of global NH3 emissions by utilizing a simplified approach 
+compared to other readily available datasets. Moreover, the NH3_STAT model 
+provides an opportunity to predict future NH3 emissions in a changing world.
+
+Please let me know if anything needs clarification.  
+
+Regards,Tom
