@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Futura, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>The Effect of Climate Change on Category Five Hurricanes</h1>
+<p>Project Team: Shauna Allen, Ben Anderson, Sophie Geister-Jones, Machaela Madsen, Paul Moses, Giacomo Siciliani, and Justin Sterner</p>
+
+<!--SGJ: W3schools helped with this code and by helped I mean I copy and pasted it and then googled things I wanted to change-->
+
+<div class="popup" onclick="myFunction()">Our Project Catalyst
+    <span class="popuptext" id="myPopup">According to NOAA, Hurricane Ian was responsible for over 150 deaths and over $112 billion in damages, which made it the costliest hurricane in the history of Florida, and the third most costly in U.S. history. While it was a Category 4 hurricane when it hit Florida, and fell to a Category Three by the time it struck Cuba and a Category One when it hit South Carolina, it did hit wind speeds necessary to qualify it as a Category Five hurricane while spinning in the Atlantic.</span>
+  </div>
+  <style> {
+    text-align: center}
+    </style>
+
+ <style> .popup {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 500px;
+    background-color: #ADD8E6;
+    color: #0f0f0f;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-left: 80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 25px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #ADD8E6 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }</style>
+  <script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
+
+</body>
+<h2>How has the world changed globally in the last century in regards to climate change?</h2>
+<style> h2 {
+    margin-top: 200px;
+}
+</style>
+
+<!--Paul's graphs-->
+<img src="https://seaborn.pydata.org/_images/errorband_lineplots.png" alt="Placeholder Imagee" width="700" height="500">
+<p>could include a link to our sources underneath the image or a popup with a complete proper citation idk</p>
+
+<h2>A Look at the Hurricanes Themselves:</h2>
+<style> h2 {
+    margin-top: 200px;
+}
+</style>
+
+<div id="map-container">
+    <div id='map'>
+    </div>
+  </div>
+  <style>
+#map-container {
+    position: relative;
+    height: 1000px;
+    width: 700px;
+}
+
+#map {
+    position: relative;
+    height: inherit;
+    width: inherit;
+}
+  </style>
+ <!--
+<script>
+  
+  L.mapbox.accessToken = 'pk.eyJ1IjoiYWxvb2thdG9tbW9yb3ciLCJhIjoiNGM4ODhkZjUwMGM1ZDE4M2VjNzQ4MmQ4ODcxMjk5ZjMifQ.XVvFc8kl-0z4NAblE-mNqw';
+  var map = L.mapbox.map('map', 'mapbox.streets').setView([40, -74.50], 10);
+  
+  </script>
+-->
+
+</html>
