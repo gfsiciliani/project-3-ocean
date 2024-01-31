@@ -1,4 +1,4 @@
-time,airTemperature.noaa,airTemperature.sg
+time,airTemperature_noaa,airTemperature_sg
 2021-09-23T00:00:00+00:00,28.42,28.42
 2021-09-23T01:00:00+00:00,28.25,28.25
 2021-09-23T02:00:00+00:00,28.08,28.08
