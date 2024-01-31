@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inport-metadata xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.9">
+   <item-identification>
+      <catalog-item-id>55520</catalog-item-id>
+      <title>Antarctic Fur Seal Pup Counts CS 1995-2012 v1.0</title>
+      <catalog-item-type>Data Set</catalog-item-type>
+      <metadata-workflow-state ccs-id="4">Draft</metadata-workflow-state>
+      <parent-catalog-item-id>55437</parent-catalog-item-id>
+      <parent-title>Antarctic Fur Seal Pup Counts CS 1995-2012 v1.0</parent-title>
+      <parent-catalog-item-type>Project</parent-catalog-item-type>
+      <status>Completed</status>
+      <abstract>A Cape-wide census of Antarctic fur seal (Arctocephalus gazella) pups (live and dead) occurs every year once pupping is over.  The census occurs in the last days of December, on a day when conditions and visibility are favorable. Cape Shirreff is located on Livingston Island, in the South Shetlands off the Antarctic Peninsula.</abstract>
+      <purpose>Monitoring pup count data allows researchers to monitor the condition of the local fur seal populations at the Cape Shirreff research site.  The US AMLR Program uses these data as part of a larger ecosystem study in the antarctic peninsula region.</purpose>
+      <other-citation-details>NCEI archive identifier: XXXXX
+http://accession.nodc.noaa.gov/XXX</other-citation-details>
+      <supplemental-information>See also "Squeezed from both ends: Decline in Antarctic fur seals in the South
+Shetland Islands driven by both Top–down and Bottom–up processes" (2014) Goebel ME,  Reiss CS. CCAMLR Working Group WG-EMM-14(2.2.2) [https://www.ccamlr.org/en/wg-emm-14/39]</supplemental-information>
+      <doi>https://doi.org/xxxxxx</doi>
+      <doi-registration-authority>DOI Registration Authority</doi-registration-authority>
+   </item-identification>
+   <keywords>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>AMLR</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>Antarctic fur seal</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>Arctocephalus</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>census</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>count</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>ecosystem</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>fur seal</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>fur seals</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>gazella</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>monitoring</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>pup</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Admiralty Bay</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Antarctic</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Antarctica</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Bransfield Strait</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Cape Shirreff</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Livingston Island</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>South Shetlands</keyword>
+      </keyword>
+   </keywords>
+   <physical-location>
+      <organization>Southwest Fisheries Science Center</organization>
+      <city>La Jolla</city>
+      <state-province>CA</state-province>
+      <country>USA</country>
+   </physical-location>
+   <data-set-information>
+      <data-set-scope-code>Data Set</data-set-scope-code>
+      <data-set-type>CSV Files</data-set-type>
+      <maintenance-frequency>As Needed</maintenance-frequency>
+      <data-set-creation-date>2014</data-set-creation-date>
+      <data-set-credit>US Antarctic Marine Living Resources Program, NOAA</data-set-credit>
+   </data-set-information>
+   <entity-attribute-information partial-listing="No" total-count="1">
+      <entity>
+         <catalog-item-id>55521</catalog-item-id>
+         <title>Antarctic Fur Seal Pup Counts CS 1995-2012 v1.0</title>
+         <metadata-workflow-state ccs-id="4">Draft</metadata-workflow-state>
+         <status>Completed</status>
+         <abstract>A Cape-wide census of Antarctic fur seal (Arctocephalus gazella) pups (live and dead) occurs every year once pupping is over.  The census occurs in the last days of December, on a day when conditions and visibility are favorable. Cape Shirreff is located on Livingston Island, in the South Shetlands off the Antarctic Peninsula.</abstract>
+         <supplemental-information>See also "Squeezed from both ends: Decline in Antarctic fur seals in the South
+Shetland Islands driven by both Top–down and Bottom–up processes" (2014) Goebel ME,  Reiss CS. CCAMLR Working Group WG-EMM-14(2.2.2) [https://www.ccamlr.org/en/wg-emm-14/39]</supplemental-information>
+         <entity-information>
+            <entity-type>Data File</entity-type>
+            <active-version>Yes</active-version>
+            <description>CSV file with pup census counts for austral seasons; two columns.</description>
+         </entity-information>
+         <data-attributes partial-listing="No" total-count="2">
+            <data-attribute cc-id="819568">
+               <seq-order>1</seq-order>
+               <name>Season</name>
+               <data-storage-type>character</data-storage-type>
+               <max-length>9</max-length>
+               <is-required>Yes</is-required>
+               <is-pkey>No</is-pkey>
+               <status>Active</status>
+               <description>Season during which the census was conducted.  Season spans austral spring and summer.  Format is YYYY/ZZZZ where YYYY is the start of the austral spring and ZZZZ represents the corresponding austral summer.  </description>
+            </data-attribute>
+            <data-attribute cc-id="819569">
+               <seq-order>2</seq-order>
+               <name>Pup Count</name>
+               <data-storage-type>integer</data-storage-type>
+               <max-length>4</max-length>
+               <is-required>Yes</is-required>
+               <is-pkey>No</is-pkey>
+               <status>Active</status>
+               <description>Census count of pups for that season.  See also CCAMLR reference provided for additional information regarding how this value was calculated.</description>
+            </data-attribute>
+         </data-attributes>
+      </entity>
+   </entity-attribute-information>
+   <support-roles>
+      <support-role cc-id="819533" in-effect="Yes">
+         <support-role-type>Data Steward</support-role-type>
+         <from-date>2011-05-09</from-date>
+         <contact-type>Person</contact-type>
+         <contact-name>Sexton, Stephanie</contact-name>
+         <contact-email>stephanie.sexton@noaa.gov</contact-email>
+         <contact-address>8901 La Jolla Shores Dr</contact-address>
+         <contact-address-city>La Jolla</contact-address-city>
+         <contact-address-state>CA</contact-address-state>
+         <contact-address-zip>92037</contact-address-zip>
+         <contact-address-country>USA</contact-address-country>
+         <contact-phone-number>858-546-5604</contact-phone-number>
+         <contact-fax-number>858-546-7003</contact-fax-number>
+      </support-role>
+      <support-role cc-id="819534" in-effect="Yes">
+         <support-role-type>Distributor</support-role-type>
+         <from-date>2011-05-09</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>Southwest Fisheries Science Center</contact-name>
+         <contact-noaa-acronym>SWFSC</contact-noaa-acronym>
+         <contact-address>8901 La Jolla Shores Dr.</contact-address>
+         <contact-address-city>La Jolla</contact-address-city>
+         <contact-address-state>CA</contact-address-state>
+         <contact-address-zip>92037</contact-address-zip>
+         <contact-address-country>USA</contact-address-country>
+         <contact-phone-number>(858)546-7000</contact-phone-number>
+         <contact-url>http://swfsc.noaa.gov/</contact-url>
+         <contact-business-hours>8:00-16:30</contact-business-hours>
+      </support-role>
+      <support-role cc-id="819535" in-effect="Yes">
+         <support-role-type>Metadata Contact</support-role-type>
+         <from-date>2011-05-09</from-date>
+         <contact-type>Person</contact-type>
+         <contact-name>Sexton, Stephanie</contact-name>
+         <contact-email>stephanie.sexton@noaa.gov</contact-email>
+         <contact-address>8901 La Jolla Shores Dr</contact-address>
+         <contact-address-city>La Jolla</contact-address-city>
+         <contact-address-state>CA</contact-address-state>
+         <contact-address-zip>92037</contact-address-zip>
+         <contact-address-country>USA</contact-address-country>
+         <contact-phone-number>858-546-5604</contact-phone-number>
+         <contact-fax-number>858-546-7003</contact-fax-number>
+      </support-role>
+      <support-role cc-id="819536" in-effect="Yes">
+         <support-role-type>Point of Contact</support-role-type>
+         <from-date>2011-05-09</from-date>
+         <contact-type>Person</contact-type>
+         <contact-name>Sexton, Stephanie</contact-name>
+         <contact-email>stephanie.sexton@noaa.gov</contact-email>
+         <contact-address>8901 La Jolla Shores Dr</contact-address>
+         <contact-address-city>La Jolla</contact-address-city>
+         <contact-address-state>CA</contact-address-state>
+         <contact-address-zip>92037</contact-address-zip>
+         <contact-address-country>USA</contact-address-country>
+         <contact-phone-number>858-546-5604</contact-phone-number>
+         <contact-fax-number>858-546-7003</contact-fax-number>
+      </support-role>
+   </support-roles>
+   <extents>
+      <extent cc-id="819529">
+         <geographic-areas>
+            <geographic-area cc-id="819531">
+               <west-bound>-64</west-bound>
+               <east-bound>-43</east-bound>
+               <north-bound>-58</north-bound>
+               <south-bound>-65</south-bound>
+               <description>FAO Area 48.1, CCAMLR Area 48.1, Antarctic Peninsula, South Shetland Islands</description>
+            </geographic-area>
+         </geographic-areas>
+         <time-frames>
+            <time-frame cc-id="819530">
+               <time-frame-type>Range</time-frame-type>
+               <start-date-time>1995</start-date-time>
+               <end-date-time>2012</end-date-time>
+            </time-frame>
+         </time-frames>
+      </extent>
+   </extents>
+   <access-information>
+      <security-class>Unclassified</security-class>
+      <data-access-policy>Available online at https://swfsc.noaa.gov/AERD-Data/</data-access-policy>
+      <data-access-procedure>https://swfsc.noaa.gov/AERD-Data/</data-access-procedure>
+      <data-access-constraints>None</data-access-constraints>
+      <data-use-constraints>None</data-use-constraints>
+      <metadata-access-constraints>None</metadata-access-constraints>
+      <metadata-use-constraints>None</metadata-use-constraints>
+   </access-information>
+   <distribution-information>
+      <distribution cc-id="819540">
+         <download-url>https://swfsc.noaa.gov/AERD-Data/</download-url>
+         <distributor cc-id="819534">
+            <from-date>2011-05-09</from-date>
+            <contact-type>Organization</contact-type>
+            <contact-name>Southwest Fisheries Science Center</contact-name>
+         </distributor>
+         <file-name>Antarctic Fur Seal Pup Counts CS 1995-2012 v1_0.cs</file-name>
+         <file-type>csv (comma-separated values)</file-type>
+      </distribution>
+   </distribution-information>
+   <urls>
+      <url cc-id="819537">
+         <url>https://swfsc.noaa.gov/aerd</url>
+         <name>U.S. Antarctic Marine Living Resources (US-AMLR) Program</name>
+         <url-type>Online Resource</url-type>
+         <description>NOAA, NMFS, SWFSC, Antarctic Ecosystem Research Division</description>
+      </url>
+   </urls>
+   <data-quality>
+      <completeness-measure>Blanks represent either data was not collected, or errors exist that prevent a census for that species during that season.</completeness-measure>
+      <quality-control-procedures>Data collected using recognized protocols.
+
+</quality-control-procedures>
+   </data-quality>
+   <data-management>
+      <resources-identified>No</resources-identified>
+      <resources-budget-percentage>Unknown</resources-budget-percentage>
+      <data-access-directive-compliant>Yes</data-access-directive-compliant>
+      <data-access-directive-waiver>No</data-access-directive-waiver>
+      <delay-collection-dissemination>Two years</delay-collection-dissemination>
+      <archive-location>NCEI-CO</archive-location>
+      <delay-collection-archive>Two years</delay-collection-archive>
+      <data-protection-plan>Data are stored on a server at the Southwest Fisheries Science Center which has all appropriate access controls, and archived at the NCEI with assigned DOI (see title section for DOI information).</data-protection-plan>
+   </data-management>
+   <lineage>
+      <lineage-statement>Raw data are collected by researchers at land based stations, entered into data files, reviewed for QA/QC and later on shore-based servers.
+
+</lineage-statement>
+   </lineage>
+   <child-items>
+      <child-item>
+         <catalog-item-id>55521</catalog-item-id>
+         <catalog-item-type>Entity</catalog-item-type>
+         <title>Antarctic Fur Seal Pup Counts CS 1995-2012 v1.0</title>
+      </child-item>
+   </child-items>
+   <catalog-details>
+      <metadata-record-created-by pers-id="7592">Stephanie Sexton</metadata-record-created-by>
+      <metadata-record-created>2019-02-10T23:13:11</metadata-record-created>
+      <metadata-record-last-modified-by pers-id="7592">Stephanie Sexton</metadata-record-last-modified-by>
+      <metadata-record-last-modified>2019-02-10T23:52:20</metadata-record-last-modified>
+      <owner-organization>Southwest Fisheries Science Center</owner-organization>
+      <owner-organization-acronym>SWFSC</owner-organization-acronym>
+      <owner-organization-address>8901 La Jolla Shores Dr.</owner-organization-address>
+      <owner-organization-address-city>La Jolla</owner-organization-address-city>
+      <owner-organization-address-state>CA</owner-organization-address-state>
+      <owner-organization-address-zip>92037</owner-organization-address-zip>
+      <owner-organization-address-country>USA</owner-organization-address-country>
+      <owner-organization-phone>(858)546-7000</owner-organization-phone>
+      <owner-organization-url>http://swfsc.noaa.gov/</owner-organization-url>
+      <owner-organization-business-hours>8:00-16:30</owner-organization-business-hours>
+      <publication-status>Never Published</publication-status>
+      <is-do-not-publish>No</is-do-not-publish>
+      <metadata-next-review-date>2019-03-29</metadata-next-review-date>
+      <linking-share-level>Public</linking-share-level>
+   </catalog-details>
+</inport-metadata>
