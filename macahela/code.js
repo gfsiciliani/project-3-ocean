@@ -1,5 +1,5 @@
 let mymap = L.map("map", {
-    center: [25.7617, -80.1918],
+    center: [30, -66],
     zoom:4
 });
 
@@ -29,14 +29,30 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         const hurricaneName = row.name;
         const windSpeed = parseFloat(row.wind);
 
-        if (!groupedData[hurricaneName]) {
-            groupedData[hurricaneName] = [];
-            maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-        } else {
-            maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-        }
+        console.log(`[${latitude}, ${longitude}]`)
+
+
+        // Only process data for the specified hurricane
+        if (hurricaneName === 'Ivan') { 
+            if (!groupedData[hurricaneName]) {
+                groupedData[hurricaneName] = [];
+                maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+            } else {
+                maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+            }
+
+        // // For mapping ALL hurricanes
+        // if (!groupedData[hurricaneName]) {
+        //     groupedData[hurricaneName] = [];
+        //     maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        // } else {
+        //     maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        // }
 
         groupedData[hurricaneName].push([latitude, longitude]);
+        console.log("=============")
+        console.log(groupedData)
+        }
 
         // Create a marker for each data point
         // L.marker([latitude, longitude])
@@ -51,11 +67,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
     }
 });
-
-        
-        
-
-        
-
 
 //magnitude of marker to be wind speed and connect markers for each hurricane/color code
