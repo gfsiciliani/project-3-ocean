@@ -22,18 +22,15 @@ drop down menus to select a specific event or set of events or time frame or reg
 all vs ocean temps
 
 ## Resources
-### APIs
+- [NOAA Atlantic Hurricane dataset](https://www.kaggle.com/datasets/utkarshx27/noaa-atlantic-hurricane-database)
 - [stormglass.io Weather API](https://stormglass.io/marine-weather/)
-- [Our World in Data | CO2 Emissions](https://ourworldindata.org/co2-emissions#%253A~%253Atext%253DBy%25201990%2520this%2520had%2520almost%252Cyet%2520to%2520reach%2520their%2520peak)
 - [NOAA Hurricane Satellite (HURSAT) Data](https://www.ncei.noaa.gov/products/hurricane-satellite-data)
+- [Our World in Data | CO2 Emissions](https://ourworldindata.org/co2-emissions#%253A~%253Atext%253DBy%25201990%2520this%2520had%2520almost%252Cyet%2520to%2520reach%2520their%2520peak)
 
 ### Database
-- [MongoDB](https://www.mongodb.com/)
+- SQLite
 
 ### Packages
-- [Seaborn](https://seaborn.pydata.org/)* - a pretty python visualization package
+- [Seaborn](https://seaborn.pydata.org/)
 - [Plotly](https://plotly.com/graphing-libraries/)
-  - [animation](https://plotly.com/python/animations/)
 - [Leaflet](https://leafletjs.com/)
-
-*\* = new*
