@@ -79,10 +79,6 @@ Unnamed: 0,name,year,month,day,hour,lat,long,status,wind,pressure
 970,Allen,1980,8,10,6,26.1,-97.2,hurricane,100,945
 971,Allen,1980,8,10,12,26.7,-98.1,hurricane,85,960
 972,Allen,1980,8,10,18,27.3,-99.0,hurricane,70,970
-1568,Katrina,1981,11,5,6,19.6,-80.8,hurricane,65,988
-1569,Katrina,1981,11,5,12,20.0,-80.5,hurricane,75,980
-1570,Katrina,1981,11,5,18,20.4,-80.1,hurricane,70,988
-1571,Katrina,1981,11,6,0,20.9,-79.5,hurricane,65,996
 3031,Gilbert,1988,9,11,0,15.9,-66.8,hurricane,65,989
 3032,Gilbert,1988,9,11,6,16.2,-68.0,hurricane,80,982
 3033,Gilbert,1988,9,11,12,16.1,-69.5,hurricane,95,975
@@ -323,25 +319,25 @@ Unnamed: 0,name,year,month,day,hour,lat,long,status,wind,pressure
 10201,Emily V,2005,7,20,0,24.4,-96.1,hurricane,110,948
 10202,Emily V,2005,7,20,6,24.6,-96.9,hurricane,110,944
 10203,Emily V,2005,7,20,12,24.8,-97.6,hurricane,110,944
-10393,Katrina,2005,8,25,22,26.0,-80.1,hurricane,70,984
-10394,Katrina,2005,8,26,0,25.9,-80.3,hurricane,70,983
-10395,Katrina,2005,8,26,6,25.4,-81.3,hurricane,65,987
-10396,Katrina,2005,8,26,12,25.1,-82.0,hurricane,75,979
-10397,Katrina,2005,8,26,18,24.9,-82.6,hurricane,85,968
-10398,Katrina,2005,8,27,0,24.6,-83.3,hurricane,90,959
-10399,Katrina,2005,8,27,6,24.4,-84.0,hurricane,95,950
-10400,Katrina,2005,8,27,12,24.4,-84.7,hurricane,100,942
-10401,Katrina,2005,8,27,18,24.5,-85.3,hurricane,100,948
-10402,Katrina,2005,8,28,0,24.8,-85.9,hurricane,100,941
-10403,Katrina,2005,8,28,6,25.2,-86.7,hurricane,125,930
-10404,Katrina,2005,8,28,12,25.7,-87.7,hurricane,145,909
-10405,Katrina,2005,8,28,18,26.3,-88.6,hurricane,150,902
-10406,Katrina,2005,8,29,0,27.2,-89.2,hurricane,140,905
-10407,Katrina,2005,8,29,6,28.2,-89.6,hurricane,125,913
-10408,Katrina,2005,8,29,11,29.3,-89.6,hurricane,110,920
-10409,Katrina,2005,8,29,12,29.5,-89.6,hurricane,110,923
-10410,Katrina,2005,8,29,14,30.2,-89.6,hurricane,105,928
-10411,Katrina,2005,8,29,18,31.1,-89.6,hurricane,80,948
+10393,Katrina III,2005,8,25,22,26.0,-80.1,hurricane,70,984
+10394,Katrina III,2005,8,26,0,25.9,-80.3,hurricane,70,983
+10395,Katrina III,2005,8,26,6,25.4,-81.3,hurricane,65,987
+10396,Katrina III,2005,8,26,12,25.1,-82.0,hurricane,75,979
+10397,Katrina III,2005,8,26,18,24.9,-82.6,hurricane,85,968
+10398,Katrina III,2005,8,27,0,24.6,-83.3,hurricane,90,959
+10399,Katrina III,2005,8,27,6,24.4,-84.0,hurricane,95,950
+10400,Katrina III,2005,8,27,12,24.4,-84.7,hurricane,100,942
+10401,Katrina III,2005,8,27,18,24.5,-85.3,hurricane,100,948
+10402,Katrina III,2005,8,28,0,24.8,-85.9,hurricane,100,941
+10403,Katrina III,2005,8,28,6,25.2,-86.7,hurricane,125,930
+10404,Katrina III,2005,8,28,12,25.7,-87.7,hurricane,145,909
+10405,Katrina III,2005,8,28,18,26.3,-88.6,hurricane,150,902
+10406,Katrina III,2005,8,29,0,27.2,-89.2,hurricane,140,905
+10407,Katrina III,2005,8,29,6,28.2,-89.6,hurricane,125,913
+10408,Katrina III,2005,8,29,11,29.3,-89.6,hurricane,110,920
+10409,Katrina III,2005,8,29,12,29.5,-89.6,hurricane,110,923
+10410,Katrina III,2005,8,29,14,30.2,-89.6,hurricane,105,928
+10411,Katrina III,2005,8,29,18,31.1,-89.6,hurricane,80,948
 10631,Rita,2005,9,20,12,23.7,-80.3,hurricane,70,985
 10632,Rita,2005,9,20,18,23.9,-81.6,hurricane,85,975
 10633,Rita,2005,9,21,0,24.1,-82.7,hurricane,95,967
