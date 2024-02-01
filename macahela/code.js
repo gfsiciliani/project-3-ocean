@@ -29,30 +29,26 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         const hurricaneName = row.name;
         const windSpeed = parseFloat(row.wind);
 
-        console.log(`[${latitude}, ${longitude}]`)
+        // // Only process data for the specified hurricane
+        // if (hurricaneName === 'Lorenzo') { 
+        //     if (!groupedData[hurricaneName]) {
+        //         groupedData[hurricaneName] = [];
+        //         maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        //     } else {
+        //         maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        //     }
 
-
-        // Only process data for the specified hurricane
-        if (hurricaneName === 'Ivan') { 
-            if (!groupedData[hurricaneName]) {
-                groupedData[hurricaneName] = [];
-                maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-            } else {
-                maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-            }
-
-        // // For mapping ALL hurricanes
-        // if (!groupedData[hurricaneName]) {
-        //     groupedData[hurricaneName] = [];
-        //     maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-        // } else {
-        //     maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-        // }
+        // For mapping ALL hurricanes
+        if (!groupedData[hurricaneName]) {
+            groupedData[hurricaneName] = [];
+            maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        } else {
+            maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        }
 
         groupedData[hurricaneName].push([latitude, longitude]);
-        console.log("=============")
-        console.log(groupedData)
-        }
+    
+        
 
         // Create a marker for each data point
         // L.marker([latitude, longitude])
