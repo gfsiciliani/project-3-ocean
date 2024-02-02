@@ -18,4 +18,8 @@ df3 = pd.read_csv('stormi/Resources/dorian_will_airtemp.csv').reset_index(drop=F
 
 df3.to_sql('Dorian_Will', conn, index=False, if_exists='replace', dtype={'id': 'INTEGER PRIMARY KEY'})
 
+df4 = pd.read_csv('macahela/hurricanes.csv')
+
+df4.to_sql('Hurricanes', conn, index=False, if_exists='replace', dtype={'Unnamed: 0': 'INTEGER PRIMARY KEY'})
 conn.close()
+
