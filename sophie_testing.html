@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pro-GMO Alliance</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="example-styles.css">
+         <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+        <style>
+            body {
+  font-family: Futura, sans-serif;
+}
+</style>
+</head>
+<body>
+  <style>
+{ background-color: #00788B; }
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
+            .column {
+                float: center;
+                width: 33.33%;
+                padding: 5px;
+              }
+              
+              /* Clear floats after image containers */
+              .row::after {
+                content: "";
+                clear: both;
+                display: table;
+              }
+            
+            
+            /* Styling the map */
+              .container {
+                display: flex;
+                align-items: center;
+                justify-content: center
+              }
+            
+            #map {
+                height: 600px; 
+                width: 75%
+            }
+            
+            .text {
+                font-size: 15px;
+                padding-left: 20px;
+            }</style>
+    </head>
+    <body>
+    <div id="div-for-article">
+        <article id="introduction">
+            <h2>Introduction</h2>
+            <q>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et 
+            quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
+            sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
+            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
+            ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+            vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</q>
+        </article>
+    </div>
+    <div id="div-for-section">
+        <section id="Products">
+            <div class="row">
+                <h2>Our Products</h2>
+                <div class="column">
+                  <img src="https://images.unsplash.com/photo-1632125941710-35a9d2fcc7ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Maize" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://images.unsplash.com/photo-1595615636850-3292eb0a95b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Sunflower" style="width:100%">
+                  </div>
+                <div class="column">
+                  <img src="https://images.unsplash.com/photo-1600333859399-228aa03f7dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Potato" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="https://images.unsplash.com/photo-1630145398476-853543b02843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80" alt="Cotton" style="width:100%">
+                </div>
+              </div>
+        </section>
+    </div>
+    <div>
+        <br>
+        <h2>Our Branches</h2>
+        <br>
+    </div>
+      <div class="container">
+        <div id="map">
+          <script src="macahela/code.js">
+            var map = L.map("map", {
+    center: [30, -66],
+    zoom:4
+});
+
+//
+function getColorByWindSpeed(windSpeed) {
+    if (windSpeed < 74) return '#33cc33'; // Tropical Depression (Green)
+    else if (windSpeed < 96) return '#ffcc00'; // Tropical Storm (Yellow)
+    else if (windSpeed < 111) return '#ff9900'; // Category 1 Hurricane (Light Orange)
+    else if (windSpeed < 130) return '#ff6600'; // Category 2 Hurricane (Orange)
+    else if (windSpeed < 157) return '#ff3300'; // Category 3 Hurricane (Red-Orange)
+    else if (windSpeed < 178) return '#cc0000'; // Category 4 Hurricane (Red)
+    else return '#990000'; // Category 5 Hurricane (Dark Red)
+}
+
+//Add tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);
+
+  d3.csv("http://localhost:8000/hurricanes.csv").then(function (data) {
+    let groupedData = {};
+    let maxWindSpeedByHurricane = {};
+
+    data.forEach(function (row) {
+        const latitude = parseFloat(row.lat);
+        const longitude = parseFloat(row.long);
+        const hurricaneName = row.name;
+        const windSpeed = parseFloat(row.wind);
+
+        // // Only process data for the specified hurricane
+        // if (hurricaneName === 'Lorenzo') { 
+        //     if (!groupedData[hurricaneName]) {
+        //         groupedData[hurricaneName] = [];
+        //         maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        //     } else {
+        //         maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        //     }
+
+        // For mapping ALL hurricanes
+        if (!groupedData[hurricaneName]) {
+            groupedData[hurricaneName] = [];
+            maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        } else {
+            maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        }
+
+        groupedData[hurricaneName].push([latitude, longitude]);
+    
+        
+
+        // Create a marker for each data point
+        // L.marker([latitude, longitude])
+        //     .addTo(mymap)
+        //     .bindPopup(`<b>${row.name}</b><br>Status: ${row.status}<br>Wind: ${row.wind}<br>Pressure: ${row.pressure}`);
+    });
+
+    for (let hurricaneName in groupedData) {
+        let polyline = L.polyline(groupedData[hurricaneName], {
+            color: getColorByWindSpeed(maxWindSpeedByHurricane[hurricaneName]),
+            weight: 3,
+        }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
+    }
+});
+        <div class="text">
+          <h1>Want to know more?</h1>
+          <p>
+            Hover over a hurricane line to learn more about it!
+        </p>
+        </div>
+      </div>
+    </body>
+</html>
