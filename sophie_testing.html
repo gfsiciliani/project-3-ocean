@@ -1,12 +1,8 @@
-<!--would it make sense to make this a localhost?-->
-
 <!DOCTYPE html>
 <html lang="en">
-  
-<head>
-<title>Project 3: Hurricanes</title>
-<!--Found a lot of code here: https://bookdown.org/sammigachuhi/book-leaflet/embedding-leaflet-map-to-an-external-website.html-->
-<meta charset="utf-8">
+    <head>
+        <title>Pro-GMO Alliance</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="example-styles.css">
          <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -24,23 +20,26 @@
 <body>
   <style>
 { background-color: #00788B; }
+        /* Three image containers (use 25% for four, and 50% for two, etc) */
             .column {
-                float: left;
-                width: 40%;
-                padding: 10px;
+                float: center;
+                width: 33.33%;
+                padding: 5px;
               }
               
               /* Clear floats after image containers */
-              .row {
-  display: flex;
-}
+              .row::after {
+                content: "";
+                clear: both;
+                display: table;
+              }
             
             
             /* Styling the map */
               .container {
                 display: flex;
-                align-items: left;
-                justify-content: left
+                align-items: center;
+                justify-content: center
               }
             
             #map {
@@ -50,54 +49,55 @@
             
             .text {
                 font-size: 15px;
-                padding-left: 10px;
+                padding-left: 20px;
             }</style>
     </head>
-<body>
-  <style>
-{ background-color: #00788B; }
-  </style>
-
-<h1>The Effect of Climate Change on Category Five Hurricanes</h1>
-<p>Project Team: Shauna Allen, Ben Anderson, Sophie Geister-Jones, Machaela Madsen, Paul Moses, Giacomo Siciliani, and Justin Sterner</p>
-
-<h2>Our Project Catalyst</h2>
-  <p>According to NOAA, Hurricane Ian was responsible for over 150 deaths and over $112 billion in damages,<br>
-    which made it the costliest hurricane in the history of Florida, and the third most costly in U.S. history.<br>While it was a Category 4 hurricane when it hit Florida, and fell to a Category Three by the time it struck<br>
-    Cuba and a Category One when it hit South Carolina, it did hit wind speeds necessary to qualify it as a<br>
-    Category Five hurricane while spinning in the Atlantic.</p>
-    
-
-<h2>How has the world changed globally in the last century in regards to climate change?</h2>
-<style> h2 {
-    margin-top: 75px;
-}
-</style>
-
-<!--Paul's graphs-->
-<div class="column">
-  <img src="https://images.unsplash.com/photo-1632125941710-35a9d2fcc7ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Maize" style="width:100%">
-</div>
-<div class="column">
-    <img src="https://images.unsplash.com/photo-1595615636850-3292eb0a95b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Sunflower" style="width:100%">
-  </div>
-  <div class="text">
-    <p><br>Figure 1<br>Hannah Ritchie and Max Roser (2020) - “CO₂ emissions” Published online at OurWorldInData.org.<br>
-      Retrieved from: 'https://ourworldindata.org/co2-emissions' [Online Resource]</p>
-      <p><br>Figure 2<br>"Giss Surface Temperature Analysis (GISTEMP v4)” Published online at Nasa.gov.<br>
-        Retrieved from: 'https://data.giss.nasa.gov/gistemp/' [Online Resource]  </p>
-
-<div>
-  <br><br><br><br><br><br>
-  <h2>A Look a the Hurricanes Themselves</h2>
-</div>
-</div>
-<div class="container">
-  <div id="map">
-    <script src="macahela/code.js">
-      var map = L.map("map", {
-center: [30, -66],
-zoom:4
+    <body>
+    <div id="div-for-article">
+        <article id="introduction">
+            <h2>Introduction</h2>
+            <q>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et 
+            quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
+            sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et 
+            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
+            ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+            vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</q>
+        </article>
+    </div>
+    <div id="div-for-section">
+        <section id="Products">
+            <div class="row">
+                <h2>Our Products</h2>
+                <div class="column">
+                  <img src="https://images.unsplash.com/photo-1632125941710-35a9d2fcc7ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Maize" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://images.unsplash.com/photo-1595615636850-3292eb0a95b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Sunflower" style="width:100%">
+                  </div>
+                <div class="column">
+                  <img src="https://images.unsplash.com/photo-1600333859399-228aa03f7dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Potato" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="https://images.unsplash.com/photo-1630145398476-853543b02843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80" alt="Cotton" style="width:100%">
+                </div>
+              </div>
+        </section>
+    </div>
+    <div>
+        <br>
+        <h2>Our Branches</h2>
+        <br>
+    </div>
+      <div class="container">
+        <div id="map">
+          <script src="macahela/code.js">
+            var map = L.map("map", {
+    center: [30, -66],
+    zoom:4
 });
 
 //
@@ -160,27 +160,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
     }
 });
-    </script>
-  </div>
-  <div class="text">
-    <p>Map built using data gathered<br>
-      from source source source<br>
-      source source.
-  </p>
-  </div>
-</div>
-<p>To learn more about each hurricane, hover over their path.</p>
-
-
-<!--Ben's windspeed visual-->
-<h2>A closer look at hurricane windspeed</h2>
-<img src="https://seaborn.pydata.org/_images/errorband_lineplots.png" alt="Placeholder Imagee" width="700" height="500">
-<p>Graphic created using data gathered from stormglass.io, a marine weather API</p>
-
-<h2>Ethical Considerations</h2>
-<p>Humans are actively destroying the planet. We are a stain on this earth.<br>
-  Oppenheimer was right, we ARE death destroyer of world.</p>
-
-</body>
-
+        <div class="text">
+          <h1>Want to know more?</h1>
+          <p>
+            Hover over a hurricane line to learn more about it!
+        </p>
+        </div>
+      </div>
+    </body>
 </html>
