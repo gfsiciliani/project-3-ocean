@@ -48,6 +48,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
         groupedData[hurricaneName].push([latitude, longitude]);
     
+        groupedData[hurricaneName].forEach(function (point) {
+            let circleMarker = L.circleMarker(point, {
+                radius: 3,
+                fillColor: "red",
+                color: 'red',
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).addTo(mymap);
+            circleMarker.bindPopup(`<b>${row.name}</b><br>Wind Speed: ${row.wind}`);
+        });
         
 
         // Create a marker for each data point
@@ -60,7 +71,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         let polyline = L.polyline(groupedData[hurricaneName], {
             color: getColorByWindSpeed(maxWindSpeedByHurricane[hurricaneName]),
             weight: 3,
-        }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
+        }).addTo(mymap)//.bindPopup(`<b>${hurricaneName}</b>`);
+        
     }
 });
 
