@@ -1,0 +1,8 @@
+.DS_Store
+api_key.txt
+.ipynb_checkpoints/
+__pycache__/
+test/
+keys/
+.vscode
+weather.sqlite
