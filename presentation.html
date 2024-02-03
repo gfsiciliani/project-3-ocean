@@ -1,0 +1,186 @@
+<!--would it make sense to make this a localhost?-->
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<title>Project 3: Hurricanes</title>
+<!--Found a lot of code here: https://bookdown.org/sammigachuhi/book-leaflet/embedding-leaflet-map-to-an-external-website.html-->
+<meta charset="utf-8">
+        <link rel="stylesheet" href="example-styles.css">
+         <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+        crossorigin=""></script>
+        <style>
+            body {
+  font-family: Futura, sans-serif;
+}
+</style>
+</head>
+<body>
+  <style>
+{ background-color: #00788B; }
+            .column {
+                float: left;
+                width: 40%;
+                padding: 10px;
+              }
+              
+              /* Clear floats after image containers */
+              .row {
+  display: flex;
+}
+            
+            
+            /* Styling the map */
+              .container {
+                display: flex;
+                align-items: left;
+                justify-content: left
+              }
+            
+            #map {
+                height: 600px; 
+                width: 75%
+            }
+            
+            .text {
+                font-size: 15px;
+                padding-left: 10px;
+            }</style>
+    </head>
+<body>
+  <style>
+{ background-color: #00788B; }
+  </style>
+
+<h1>The Effect of Climate Change on Category Five Hurricanes</h1>
+<p>Project Team: Shauna Allen, Ben Anderson, Sophie Geister-Jones, Machaela Madsen, Paul Moses, Giacomo Siciliani, and Justin Sterner</p>
+
+<h2>Our Project Catalyst</h2>
+  <p>According to NOAA, Hurricane Ian was responsible for over 150 deaths and over $112 billion in damages,<br>
+    which made it the costliest hurricane in the history of Florida, and the third most costly in U.S. history.<br>While it was a Category 4 hurricane when it hit Florida, and fell to a Category Three by the time it struck<br>
+    Cuba and a Category One when it hit South Carolina, it did hit wind speeds necessary to qualify it as a<br>
+    Category Five hurricane while spinning in the Atlantic.</p>
+    
+
+<h2>How has the world changed globally in the last century in regards to climate change?</h2>
+<style> h2 {
+    margin-top: 75px;
+}
+</style>
+
+<!--Paul's graphs-->
+<div class="column">
+  <img src="https://images.unsplash.com/photo-1632125941710-35a9d2fcc7ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Maize" style="width:100%">
+</div>
+<div class="column">
+    <img src="https://images.unsplash.com/photo-1595615636850-3292eb0a95b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Sunflower" style="width:100%">
+  </div>
+  <div class="text">
+    <p><br>Figure 1<br>Hannah Ritchie and Max Roser (2020) - “CO₂ emissions” Published online at OurWorldInData.org.<br>
+      Retrieved from: 'https://ourworldindata.org/co2-emissions' [Online Resource]</p>
+      <p><br>Figure 2<br>"Giss Surface Temperature Analysis (GISTEMP v4)” Published online at Nasa.gov.<br>
+        Retrieved from: 'https://data.giss.nasa.gov/gistemp/' [Online Resource]  </p>
+
+<div>
+  <br><br><br><br><br><br>
+  <h2>A Look a the Hurricanes Themselves</h2>
+</div>
+</div>
+<div class="container">
+  <div id="map">
+    <script src="macahela/code.js">
+      var map = L.map("map", {
+center: [30, -66],
+zoom:4
+});
+
+//
+function getColorByWindSpeed(windSpeed) {
+    if (windSpeed < 74) return '#33cc33'; // Tropical Depression (Green)
+    else if (windSpeed < 96) return '#ffcc00'; // Tropical Storm (Yellow)
+    else if (windSpeed < 111) return '#ff9900'; // Category 1 Hurricane (Light Orange)
+    else if (windSpeed < 130) return '#ff6600'; // Category 2 Hurricane (Orange)
+    else if (windSpeed < 157) return '#ff3300'; // Category 3 Hurricane (Red-Orange)
+    else if (windSpeed < 178) return '#cc0000'; // Category 4 Hurricane (Red)
+    else return '#990000'; // Category 5 Hurricane (Dark Red)
+}
+
+//Add tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);
+
+  d3.csv("http://localhost:8000/hurricanes.csv").then(function (data) {
+    let groupedData = {};
+    let maxWindSpeedByHurricane = {};
+
+    data.forEach(function (row) {
+        const latitude = parseFloat(row.lat);
+        const longitude = parseFloat(row.long);
+        const hurricaneName = row.name;
+        const windSpeed = parseFloat(row.wind);
+
+        // // Only process data for the specified hurricane
+        // if (hurricaneName === 'Lorenzo') { 
+        //     if (!groupedData[hurricaneName]) {
+        //         groupedData[hurricaneName] = [];
+        //         maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        //     } else {
+        //         maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        //     }
+
+        // For mapping ALL hurricanes
+        if (!groupedData[hurricaneName]) {
+            groupedData[hurricaneName] = [];
+            maxWindSpeedByHurricane[hurricaneName] = windSpeed;
+        } else {
+            maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
+        }
+
+        groupedData[hurricaneName].push([latitude, longitude]);
+    
+        
+
+        // Create a marker for each data point
+        // L.marker([latitude, longitude])
+        //     .addTo(mymap)
+        //     .bindPopup(`<b>${row.name}</b><br>Status: ${row.status}<br>Wind: ${row.wind}<br>Pressure: ${row.pressure}`);
+    });
+
+    for (let hurricaneName in groupedData) {
+        let polyline = L.polyline(groupedData[hurricaneName], {
+            color: getColorByWindSpeed(maxWindSpeedByHurricane[hurricaneName]),
+            weight: 3,
+        }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
+    }
+});
+    </script>
+  </div>
+  <div class="text">
+    <p>Map built using data gathered<br>
+      from source source source<br>
+      source source.
+  </p>
+  </div>
+</div>
+<p>To learn more about each hurricane, hover over their path.</p>
+
+
+<!--Ben's windspeed visual-->
+<h2>A closer look at hurricane windspeed</h2>
+<img src="https://seaborn.pydata.org/_images/errorband_lineplots.png" alt="Placeholder Imagee" width="700" height="500">
+<p>Graphic created using data gathered from stormglass.io, a marine weather API</p>
+
+<h2>Ethical Considerations</h2>
+<p>Humans are actively destroying the planet. We are a stain on this earth.<br>
+  Oppenheimer was right, we ARE death destroyer of world.</p>
+
+</body>
+
+</html>
