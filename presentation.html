@@ -7,7 +7,7 @@
 <title>Project 3: Hurricanes</title>
 <!--Found a lot of code here: https://bookdown.org/sammigachuhi/book-leaflet/embedding-leaflet-map-to-an-external-website.html-->
 <meta charset="utf-8">
-        <link rel="stylesheet" href="example-styles.css">
+        <link rel="stylesheet" href="css/style.css">
          <!-- Leaflet CSS -->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -15,15 +15,24 @@
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
         crossorigin=""></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <style>
             body {
   font-family: Futura, sans-serif;
 }
 </style>
 </head>
+
+
 <body>
   <style>
 { background-color: #00788B; }
+            .img {
+              float: center;
+              width: 80%;
+              padding: 10px;
+            }
             .column {
                 float: left;
                 width: 40%;
@@ -51,11 +60,8 @@
             .text {
                 font-size: 15px;
                 padding-left: 10px;
-            }</style>
-    </head>
-<body>
-  <style>
-{ background-color: #00788B; }
+            }
+            
   </style>
 
 <h1>The Effect of Climate Change on Category Five Hurricanes</h1>
@@ -68,118 +74,71 @@
     Category Five hurricane while spinning in the Atlantic.</p>
     
 
-<h2>How has the world changed globally in the last century in regards to climate change?</h2>
+<h2>What does climate change mean for the world?</h2>
 <style> h2 {
     margin-top: 75px;
 }
 </style>
 
 <!--Paul's graphs-->
-<div class="column">
-  <img src="https://images.unsplash.com/photo-1632125941710-35a9d2fcc7ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Maize" style="width:100%">
-</div>
-<div class="column">
-    <img src="https://images.unsplash.com/photo-1595615636850-3292eb0a95b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Sunflower" style="width:100%">
-  </div>
-  <div class="text">
-    <p><br>Figure 1<br>Hannah Ritchie and Max Roser (2020) - “CO₂ emissions” Published online at OurWorldInData.org.<br>
+<div class="img-with-text">
+    <img src="carbontemp/charts/sidebyside.png" alt="Global Changes in Carbon Dioxide and Temperature" />
+    <p>Figure 1: Hannah Ritchie and Max Roser (2020) - “CO₂ emissions” Published online at OurWorldInData.org.<br>
       Retrieved from: 'https://ourworldindata.org/co2-emissions' [Online Resource]</p>
-      <p><br>Figure 2<br>"Giss Surface Temperature Analysis (GISTEMP v4)” Published online at Nasa.gov.<br>
-        Retrieved from: 'https://data.giss.nasa.gov/gistemp/' [Online Resource]  </p>
+      <p>Figure 2: "Giss Surface Temperature Analysis (GISTEMP v4)” Published online at Nasa.gov.<br>
+        Retrieved from: 'https://data.giss.nasa.gov/gistemp/' [Online Resource]  </p></div>
 
-<div>
-  <br><br><br><br><br><br>
-  <h2>A Look a the Hurricanes Themselves</h2>
-</div>
-</div>
+  <!--Machaela/Giacomo's Map-->
+  <h2>The storms themselves</h2>
+  <p>To learn more about each hurricane, click onto their path.</p>
 <div class="container">
   <div id="map">
-    <script src="macahela/code.js">
-      var map = L.map("map", {
-center: [30, -66],
-zoom:4
-});
-
-//
-function getColorByWindSpeed(windSpeed) {
-    if (windSpeed < 74) return '#33cc33'; // Tropical Depression (Green)
-    else if (windSpeed < 96) return '#ffcc00'; // Tropical Storm (Yellow)
-    else if (windSpeed < 111) return '#ff9900'; // Category 1 Hurricane (Light Orange)
-    else if (windSpeed < 130) return '#ff6600'; // Category 2 Hurricane (Orange)
-    else if (windSpeed < 157) return '#ff3300'; // Category 3 Hurricane (Red-Orange)
-    else if (windSpeed < 178) return '#cc0000'; // Category 4 Hurricane (Red)
-    else return '#990000'; // Category 5 Hurricane (Dark Red)
-}
-
-//Add tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(mymap);
-
-  d3.csv("http://localhost:8000/hurricanes.csv").then(function (data) {
-    let groupedData = {};
-    let maxWindSpeedByHurricane = {};
-
-    data.forEach(function (row) {
-        const latitude = parseFloat(row.lat);
-        const longitude = parseFloat(row.long);
-        const hurricaneName = row.name;
-        const windSpeed = parseFloat(row.wind);
-
-        // // Only process data for the specified hurricane
-        // if (hurricaneName === 'Lorenzo') { 
-        //     if (!groupedData[hurricaneName]) {
-        //         groupedData[hurricaneName] = [];
-        //         maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-        //     } else {
-        //         maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-        //     }
-
-        // For mapping ALL hurricanes
-        if (!groupedData[hurricaneName]) {
-            groupedData[hurricaneName] = [];
-            maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-        } else {
-            maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-        }
-
-        groupedData[hurricaneName].push([latitude, longitude]);
-    
-        
-
-        // Create a marker for each data point
-        // L.marker([latitude, longitude])
-        //     .addTo(mymap)
-        //     .bindPopup(`<b>${row.name}</b><br>Status: ${row.status}<br>Wind: ${row.wind}<br>Pressure: ${row.pressure}`);
-    });
-
-    for (let hurricaneName in groupedData) {
-        let polyline = L.polyline(groupedData[hurricaneName], {
-            color: getColorByWindSpeed(maxWindSpeedByHurricane[hurricaneName]),
-            weight: 3,
-        }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
-    }
-});
+    <script src="macahela/code_copy.js">
+     
     </script>
   </div>
   <div class="text">
-    <p>Map built using data gathered<br>
+    <p>Figure 3: Built using data gathered<br>
       from source source source<br>
       source source.
   </p>
   </div>
 </div>
-<p>To learn more about each hurricane, hover over their path.</p>
 
 
-<!--Ben's windspeed visual-->
-<h2>A closer look at hurricane windspeed</h2>
-<img src="https://seaborn.pydata.org/_images/errorband_lineplots.png" alt="Placeholder Imagee" width="700" height="500">
-<p>Graphic created using data gathered from stormglass.io, a marine weather API</p>
 
+<!--Ben/Shauna's windspeed visual-->
+<h2>A closer look at the changes in hurricanes</h2>
+<div class="container">
+  <label for="locationlabel">Select Location:</label>
+    <select id="locationDropdown" onchange="updateGraphByLocation()">
+        <option value="Abaco">Abaco</option>
+        <option value="Myrtle_Beach">Myrtle Beach</option>
+        <option value="Wilmington">Wilmington</option>
+    </select>
+    
+
+    <!-- map div -->
+    <div id="plot"></div>
+
+    <!-- JavaScript file -->
+    <script type="text/javascript" src="stormi/plots.js"></script>
+  </div>
+<p>Figure 4: Greated using data gathered from stormglass.io, a marine weather API</p>
+<br><br>
 <h2>Ethical Considerations</h2>
-<p>Humans are actively destroying the planet. We are a stain on this earth.<br>
-  Oppenheimer was right, we ARE death destroyer of world.</p>
+<p>While all trends do show a positive correlation between climate change and the increase in storms and their wind speeds,<br>
+  some scientists (DOI: https://doi.org/10.1175/2009JCLI3034.1) do emphasize that context is crucial, and increased scientific<br>
+  abilites now allow us to be aware of storms that are more short lived, especially short storms that never reach land. They also<br>
+  claim that for optimal scientific studies, they would look at more than 100 years of data, which is difficult due to<br>
+  technological gaps in the past.</p>
+<p>We also understand that our data is only looking at Atlantic storms. This ignores a significant part of the world that also<br>
+  experiences tropical cyclones, and our exclusion of them from this study is a gap in our analysis. While that data may be available <br>
+online, we chose to stay with largely United States research studies (with the exception of Argo/Argovis data used)<br>
+which is a notably lack in data diversity.</p>
+<p>Lastly, we did have considerable personal bias going into this project. While we beleive that our findings back up our biases and<br>
+  maintain scientific integrity (climate change is real, y'all), we acknowledge that we didn't seak out any studies that would potentially<br>
+challenge what we were already finding. (Although let it be known that from the bit of project creep we explored, our findings are pretty solid.)</p>
 
 </body>
 
