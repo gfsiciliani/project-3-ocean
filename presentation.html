@@ -15,6 +15,7 @@
         <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
         crossorigin=""></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <style>
             body {
   font-family: Futura, sans-serif;
@@ -89,77 +90,13 @@
 
 <div>
   <br><br><br><br><br><br>
-  <h2>A Look a the Hurricanes Themselves</h2>
+  <h2>The storms themselves</h2>
 </div>
 </div>
 <div class="container">
   <div id="map">
     <script src="macahela/code.js">
-      var map = L.map("map", {
-center: [30, -66],
-zoom:4
-});
-
-//
-function getColorByWindSpeed(windSpeed) {
-    if (windSpeed < 74) return '#33cc33'; // Tropical Depression (Green)
-    else if (windSpeed < 96) return '#ffcc00'; // Tropical Storm (Yellow)
-    else if (windSpeed < 111) return '#ff9900'; // Category 1 Hurricane (Light Orange)
-    else if (windSpeed < 130) return '#ff6600'; // Category 2 Hurricane (Orange)
-    else if (windSpeed < 157) return '#ff3300'; // Category 3 Hurricane (Red-Orange)
-    else if (windSpeed < 178) return '#cc0000'; // Category 4 Hurricane (Red)
-    else return '#990000'; // Category 5 Hurricane (Dark Red)
-}
-
-//Add tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(mymap);
-
-  d3.csv("http://localhost:8000/hurricanes.csv").then(function (data) {
-    let groupedData = {};
-    let maxWindSpeedByHurricane = {};
-
-    data.forEach(function (row) {
-        const latitude = parseFloat(row.lat);
-        const longitude = parseFloat(row.long);
-        const hurricaneName = row.name;
-        const windSpeed = parseFloat(row.wind);
-
-        // // Only process data for the specified hurricane
-        // if (hurricaneName === 'Lorenzo') { 
-        //     if (!groupedData[hurricaneName]) {
-        //         groupedData[hurricaneName] = [];
-        //         maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-        //     } else {
-        //         maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-        //     }
-
-        // For mapping ALL hurricanes
-        if (!groupedData[hurricaneName]) {
-            groupedData[hurricaneName] = [];
-            maxWindSpeedByHurricane[hurricaneName] = windSpeed;
-        } else {
-            maxWindSpeedByHurricane[hurricaneName] = Math.max(maxWindSpeedByHurricane[hurricaneName], windSpeed);
-        }
-
-        groupedData[hurricaneName].push([latitude, longitude]);
-    
-        
-
-        // Create a marker for each data point
-        // L.marker([latitude, longitude])
-        //     .addTo(mymap)
-        //     .bindPopup(`<b>${row.name}</b><br>Status: ${row.status}<br>Wind: ${row.wind}<br>Pressure: ${row.pressure}`);
-    });
-
-    for (let hurricaneName in groupedData) {
-        let polyline = L.polyline(groupedData[hurricaneName], {
-            color: getColorByWindSpeed(maxWindSpeedByHurricane[hurricaneName]),
-            weight: 3,
-        }).addTo(mymap).bindPopup(`<b>${hurricaneName}</b>`);
-    }
-});
+     
     </script>
   </div>
   <div class="text">
@@ -169,13 +106,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   </p>
   </div>
 </div>
-<p>To learn more about each hurricane, hover over their path.</p>
+<p>To learn more about each hurricane, click onto their path.</p>
 
 
 <!--Ben's windspeed visual-->
-<h2>A closer look at hurricane windspeed</h2>
+<h2>A closer look at the changes in hurricanes</h2>
 <img src="https://seaborn.pydata.org/_images/errorband_lineplots.png" alt="Placeholder Imagee" width="700" height="500">
-<p>Graphic created using data gathered from stormglass.io, a marine weather API</p>
+<p>this is a placeholder.<br>Graphic created using data gathered from stormglass.io, a marine weather API</p>
 
 <h2>Ethical Considerations</h2>
 <p>Humans are actively destroying the planet. We are a stain on this earth.<br>
