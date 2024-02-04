@@ -4,3 +4,5 @@ api_key.txt
 __pycache__/
 test/
 keys/
+.vscode
+weather.sqlite
