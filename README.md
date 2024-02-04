@@ -21,6 +21,13 @@ drop down menus to select a specific event or set of events or time frame or reg
 
 all vs ocean temps
 
+## Ethical Considerations
+While all trends do show a positive correlation between climate change and the increase in storms and their wind speeds, some scientists (DOI: https://doi.org/10.1175/2009JCLI3034.1) do emphasize that context is crucial, and increased scientific abilites now allow us to be aware of storms that are more short lived, especially short storms that never reach land. They also claim that for optimal scientific studies, they would look at more than 100 years of data, which is difficult due to technological gaps in the past.
+
+We also understand that our data is only looking at Atlantic storms. This ignores a significant part of the world that also experiences tropical cyclones, and our exclusion of them from this study is a gap in our analysis. While that data may be available online, we chose to stay with largely United States research studies (with the exception of Argo/Argovis data used) which is a notably lack in data diversity.
+
+Lastly, we did have considerable personal bias going into this project. While we beleive that our findings back up our biases and maintain scientific integrity (climate change is real, y'all), we acknowledge that we didn't seak out any studies that would potentially challenge what we were already finding. (Although let it be known that from the bit of project creep we explored, our findings are pretty solid.)
+
 ## Resources
 - [NOAA Atlantic Hurricane dataset](https://www.kaggle.com/datasets/utkarshx27/noaa-atlantic-hurricane-database)
 - [stormglass.io Weather API](https://stormglass.io/marine-weather/)
