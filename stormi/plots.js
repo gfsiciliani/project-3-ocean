@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Fetch initial data and update graph for the default location
+
     fetchAndPlotData('Abaco');
 
-    // Add event listener to the dropdown
     document.getElementById('locationDropdown').addEventListener('change', updateGraphByLocation);
 });
 
@@ -10,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 function fetchAndPlotData(location) {
     d3.json(`http://localhost:5000/api/data/${location}`).then(
         (data) => {
-            // Store the initial data in a global variable based on location
+            
             window[`${location}Data`] = data;
 
-            // Update the graph with the initial data
+          
             updateGraph(data, location);
         }
     );
@@ -42,11 +41,10 @@ function updateGraph(data, location) {
     Plotly.newPlot('plot', traces, layout);
 }
 
-// Function to update the graph based on the selected location from the dropdown
+
 function updateGraphByLocation() {
-    // Get selected location from the dropdown
+
     var selectedLocation = document.getElementById('locationDropdown').value;
 
-    // Update the graph for the selected location
     fetchAndPlotData(selectedLocation);
 }
