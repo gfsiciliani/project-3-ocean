@@ -1,25 +1,10 @@
 # Project 3 - Data Visualization, Weather
 
-## Proposal
-Our project is centered around the analysis of ocean temperature data. By integrating data from multiple authoritative APIs, our goal is to construct a visual narrative that highlights the changes in ocean temperature and potential correlations of the frequency and intensity of severe weather events, as well the effects on oceanlife.
+## Overview
+Our project presents an analytical journey through selected facets of global climate change, focusing CO2 emissions, hurricane activities, and global temperature trends.
 
-## Visualization Brainstorms
-Baby seal populations
-Storms - large scale tracking or isolating specific times/areas
-Hurricanes - large scale tracking or isolating specific times/areas
-Greenland Ice Melt
-
-start with basics--show rises in global ocean temps, surface temps, CO2 emissions
-OR we could go the opposite track and center the seals
-
-then layer on top with the ideas mentioned above
-layered line chart may work best for larger scale analysis
-bubble chart for storm intensity
-would love to incorporate gridded data to create heatmaps and/or focus on a specific area
-time lapse animations could be cool?
-drop down menus to select a specific event or set of events or time frame or region or
-
-all vs ocean temps
+## Instructions
+Webpage contains three sets of visuals, two of which are interractive. One showing the paths of category 5 hurricanes, their routes clickable to reveal their name, and datapoints clickable to reveal the windspeed. The second visual may be interracted with via a drop-down menu which selects a geographic location for the graph to compare three years of temperature data.
 
 ## Ethical Considerations
 While all trends do show a positive correlation between climate change and the increase in storms and their wind speeds, some scientists (DOI: https://doi.org/10.1175/2009JCLI3034.1) do emphasize that context is crucial, and increased scientific abilites now allow us to be aware of storms that are more short lived, especially short storms that never reach land. They also claim that for optimal scientific studies, they would look at more than 100 years of data, which is difficult due to technological gaps in the past.
