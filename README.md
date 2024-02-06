@@ -26,3 +26,6 @@ Lastly, we did have considerable personal bias going into this project. While we
 - [Seaborn](https://seaborn.pydata.org/)
 - [Plotly](https://plotly.com/graphing-libraries/)
 - [Leaflet](https://leafletjs.com/)
+
+## Presentation Slides
+- https://docs.google.com/presentation/d/1m33rLC5GqkDEUTkYsn4l-ViKyNk9mXO5_uub1BL8pvU/edit#slide=id.gd5b15f0a3_5_26
