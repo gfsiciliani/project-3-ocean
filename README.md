@@ -17,7 +17,7 @@ Lastly, we did have considerable personal bias going into this project. While we
 - [NOAA Atlantic Hurricane dataset](https://www.kaggle.com/datasets/utkarshx27/noaa-atlantic-hurricane-database)
 - [stormglass.io Weather API](https://stormglass.io/marine-weather/)
 - [NOAA Hurricane Satellite (HURSAT) Data](https://www.ncei.noaa.gov/products/hurricane-satellite-data)
-- [Our World in Data | CO2 Emissions](https://ourworldindata.org/co2-emissions#%253A~%253Atext%253DBy%25201990%2520this%2520had%2520almost%252Cyet%2520to%2520reach%2520their%2520peak)
+- [Our World in Data - CO2 Emissions](https://ourworldindata.org/co2-emissions#%253A~%253Atext%253DBy%25201990%2520this%2520had%2520almost%252Cyet%2520to%2520reach%2520their%2520peak)
 
 ### Database
 - SQLite
